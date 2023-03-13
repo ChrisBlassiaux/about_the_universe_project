@@ -27,7 +27,7 @@ export class IndexPlanetsComponent {
     this.http
     .get('https://swapi.dev/api/planets/')
     .subscribe((data: any) => {
-      for (let i = 1; i <= (data.count / 10); i++) {
+      for (let i = 1; i <= Math.ceil(data.count / 10); i++) {
         this.http
         .get('https://swapi.dev/api/planets/?page=' + i)
         .subscribe((data: any) => {
