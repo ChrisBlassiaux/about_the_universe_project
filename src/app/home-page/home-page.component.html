@@ -1,0 +1,65 @@
+<main class="container">
+    <div class="card">
+        <h2 class="title text-secondary">About the universe</h2>
+        <p>Bienvenue sur 
+            <span class="text-secondary">ABOUT THE UNIVERSE</span> 
+            pour découvrir toutes nos découvertes à propos du monde qui nous entoure !
+        </p>
+        <a class="btn btn-primary mt-4" routerLink="planets">Découvrir</a>
+    </div>
+    <div class="card">
+        <h2 class="title text-secondary">Les chiffres</h2>
+        <p>Nous nous efforcons à archiver toutes nos trouvailles pour vous les partager autant que possible !</p>
+        <div class="d-grid-2 mt-5 mb-5">
+            <div class="information">
+                <span class="fas fa-users fa-3x img"></span>
+                <div>
+                    <div class="bold">
+                        Nombre d'êtres vivants recensés
+                    </div>
+                    <div class="info">
+                        <i class="fas fa-cog fa-spin" *ngIf="countCharacters == 0"></i>
+                        <span *ngIf="countCharacters != 0">{{ countCharacters }}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="information">
+                <span class="fas fa-space-shuttle fa-3x img"></span>
+                <div>
+                    <div class="bold">
+                        Nombre de véhicules recensés
+                    </div>
+                    <div class="info">
+                        <i class="fas fa-cog fa-spin" *ngIf="countVehicles == 0"></i>
+                        <span *ngIf="countVehicles != 0">{{ countVehicles}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-grid-2 mt-5 mb-5">
+            <div class="information">
+                <span class="fas fa-globe fa-3x img"></span>
+                <div>
+                    <div class="bold">
+                        Nombre de planètes recensées
+                    </div>
+                    <div class="info">
+                        <i class="fas fa-cog fa-spin" *ngIf="countPlanets == 0"></i>
+                        <span *ngIf="countPlanets != 0">{{ countPlanets}}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="information">
+                <span class="fas fa-clock fa-3x img"></span>
+                <div>
+                    <div class="bold">
+                        Prochaine mission
+                    </div>
+                    <div class="info">4 mars 2022</div>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn btn-primary float-right mt-4">Parciper à la prochain session</a>
+    </div>
+</main>
+
